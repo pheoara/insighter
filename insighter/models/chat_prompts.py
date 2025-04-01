@@ -11,7 +11,7 @@ router_prompt = PromptTemplate(
 *** Task ***: Analyze the user query given in the *** Query *** section and determine which single action to perform. You must decide which downstream agent should handle the query. The possible actions and their corresponding agents are:
 
     - **chat**: This agents answers queries about database information or small talk e.g: "how are you?", "what kind of data do you have?", what kind of insights can be generated from the data?", "any patterns or trends in the data?", "informations about the data".
-    - **insight details**: For answering queries about selected insights or their visualizability, including whether an insight is visualizable, its context, and any additional details, e.g the sql query used to generate the insight or "from the given insights which ones are visualizable or plotable?".
+    - **insight details**: For answering queries about selected insights or their visualizability, including whether an insight is visualizable, its context, and any additional details, e.g the sql query used to generate the insight or "from the given insights which ones are visualizable or plotable?", "what insights do you have?", "can you provide more details about the insights?", "can you list the insights that can be visualized?", "can you list the insights".
     - **sql database query**: This agent can only write the query it can not answer information about the data in textually.
     - **alert**: For creating alerts based on data conditions.
     - **visualization**: For generating visualizations based on the data only if the query explicitly asks for visual outputs.
@@ -198,7 +198,8 @@ insight_details_agent_prompt = PromptTemplate(
 3. If the query requests further details, provide a detailed explanation including context, trends, and any additional relevant information.
 4. Consider the business implications of the data and explain what the insights actually mean in practical terms.
 5. Highlight potential actions that could be taken based on these insights.
-6. Output your answer following the *** Output Format ***.
+6. If the user queries to  list the inights, provide a list of the insights you have.
+7. Output your answer following the *** Output Format ***.
 
 *** Output Format ***:
 "Your answer to the user query here in structured format."
