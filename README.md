@@ -17,7 +17,6 @@ Insighter is a comprehensive data analysis and insights generation tool built wi
    - [Chat Workflow Pipeline](#chat-workflow-pipeline)
    - [Insight Generation Pipeline](#insight-generation-pipeline)
 7. [AI Agent Prompts](#ai-agent-prompts)
-8. [Future Enhancements](#future-enhancements)
 
 ---
 
@@ -151,6 +150,8 @@ For in-depth insights, Insighter employs a separate pipeline that includes:
 
 
 ---
+
+## Conclusion
 
 Insighter provides a robust foundation for turning raw data into valuable insights. Its modular design, comprehensive pipelines, and intelligent AI agents make it a powerful tool for anyone looking to derive meaningful insights from their data. Built entirely with Streamlit, it offers a modern, responsive UI with efficient state management built in.
 
